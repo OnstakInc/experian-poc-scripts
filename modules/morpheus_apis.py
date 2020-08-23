@@ -4,6 +4,8 @@ import json
 import requests
 import argparse
 
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+
 #########################################################
 # Environment Variables #################################
 #########################################################
