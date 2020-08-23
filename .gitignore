@@ -1,0 +1,5 @@
+# exclude files
+run.ps1
+
+# exclude directories
+__pycache__

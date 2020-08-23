@@ -1,0 +1,646 @@
+{
+    "id": 3,
+    "tiers": {
+        "WebTier": {
+            "instances": [
+                {
+                    "instance": {
+                        "type": "centos",
+                        "cloud": "VC-TECLAB-SJC",
+                        "layout": {
+                            "provisionTypeCode": "vmware",
+                            "code": "vmware-centos-7.5-single",
+                            "instanceVersion": "7.5",
+                            "name": "VMware VM",
+                            "id": 387
+                        },
+                        "configEnabled": true,
+                        "name": "OpenCartWeb",
+                        "description": "WebTier",
+                        "allowExisting": false,
+                        "userGroup": {
+                            "id": ""
+                        }
+                    },
+                    "clouds": {
+                        "VC-TECLAB-SJC": {
+                            "backup": {
+                                "veeamManagedServer": "",
+                                "createBackup": false,
+                                "jobAction": "new",
+                                "jobRetentionCount": 3,
+                                "enabled": true,
+                                "showScheduledBackupWarning": false
+                            },
+                            "instance": {
+                                "layout": {
+                                    "provisionTypeCode": "vmware",
+                                    "code": "vmware-centos-7.5-single",
+                                    "instanceVersion": "7.5",
+                                    "name": "VMware VM",
+                                    "id": 387
+                                },
+                                "configEnabled": true,
+                                "name": "OpenCartWeb",
+                                "description": "WebTier",
+                                "allowExisting": false,
+                                "type": "centos",
+                                "userGroup": {
+                                    "id": ""
+                                }
+                            },
+                            "networkInterfaces": [
+                                {
+                                    "ipMode": "",
+                                    "primaryInterface": true,
+                                    "showNetworkPoolLabel": false,
+                                    "showNetworkDhcpLabel": true,
+                                    "network": {
+                                        "idName": "TEC-Lab|TEC-AP|APP-EPG",
+                                        "id": "network-32",
+                                        "hasPool": false
+                                    }
+                                }
+                            ],
+                            "workflow": {
+                                "taskSetId": 5
+                            },
+                            "volumes": [
+                                {
+                                    "volumeCustomizable": true,
+                                    "readonlyName": false,
+                                    "controllerId": 231,
+                                    "maxIOPS": null,
+                                    "displayOrder": 0,
+                                    "unitNumber": "0",
+                                    "minStorage": 5368709120,
+                                    "configurableIOPS": false,
+                                    "controllerMountPoint": "231:0:4:0",
+                                    "vId": 167,
+                                    "size": 20,
+                                    "name": "root",
+                                    "rootVolume": true,
+                                    "storageType": 1,
+                                    "typeId": 1,
+                                    "id": 117,
+                                    "resizeable": true,
+                                    "datastoreId": "autoCluster",
+                                    "maxStorage": 21474836480
+                                }
+                            ],
+                            "lock": {
+                                "config": {
+                                    "vmwareFolderId": true
+                                }
+                            },
+                            "config": {
+                                "resourcePoolId": 6,
+                                "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                                "aciEpgId": 19,
+                                "createUser": true
+                            },
+                            "plan": {
+                                "code": "vm-1024",
+                                "id": 367
+                            },
+                            "group": {},
+                            "lockedFields": [
+                                "version",
+                                "instance.layout.id",
+                                "plan.id",
+                                "config.vmwareFolderId",
+                                "volumes",
+                                "config.resourcePoolId",
+                                "instance.name",
+                                "instance.description",
+                                "networks"
+                            ]
+                        }
+                    },
+                    "backup": {
+                        "veeamManagedServer": "",
+                        "createBackup": false,
+                        "jobAction": "new",
+                        "jobRetentionCount": 3,
+                        "enabled": true,
+                        "showScheduledBackupWarning": false
+                    },
+                    "networkInterfaces": [
+                        {
+                            "ipMode": "",
+                            "primaryInterface": true,
+                            "showNetworkPoolLabel": false,
+                            "showNetworkDhcpLabel": true,
+                            "network": {
+                                "idName": "TEC-Lab|TEC-AP|APP-EPG",
+                                "id": "network-32",
+                                "hasPool": false
+                            }
+                        }
+                    ],
+                    "workflow": {
+                        "taskSetId": 5
+                    },
+                    "volumes": [
+                        {
+                            "volumeCustomizable": true,
+                            "readonlyName": false,
+                            "controllerId": 231,
+                            "maxIOPS": null,
+                            "displayOrder": 0,
+                            "unitNumber": "0",
+                            "minStorage": 5368709120,
+                            "configurableIOPS": false,
+                            "controllerMountPoint": "231:0:4:0",
+                            "vId": 167,
+                            "size": 20,
+                            "name": "root",
+                            "rootVolume": true,
+                            "storageType": 1,
+                            "typeId": 1,
+                            "id": 117,
+                            "resizeable": true,
+                            "datastoreId": "autoCluster",
+                            "maxStorage": 21474836480
+                        }
+                    ],
+                    "lock": {
+                        "config": {
+                            "vmwareFolderId": true
+                        }
+                    },
+                    "config": {
+                        "resourcePoolId": 6,
+                        "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                        "aciEpgId": 19,
+                        "createUser": true
+                    },
+                    "plan": {
+                        "code": "vm-1024",
+                        "id": 367
+                    },
+                    "group": {},
+                    "lockedFields": [
+                        "version",
+                        "instance.layout.id",
+                        "plan.id",
+                        "config.vmwareFolderId",
+                        "volumes",
+                        "config.resourcePoolId",
+                        "instance.name",
+                        "instance.description",
+                        "networks"
+                    ]
+                }
+            ],
+            "tierIndex": 3
+        },
+        "AppTier": {
+            "instances": [
+                {
+                    "instance": {
+                        "type": "centos",
+                        "cloud": "VC-TECLAB-SJC",
+                        "layout": {
+                            "provisionTypeCode": "vmware",
+                            "code": "vmware-centos-7.5-single",
+                            "instanceVersion": "7.5",
+                            "name": "VMware VM",
+                            "id": 387
+                        },
+                        "configEnabled": true,
+                        "name": "OpenCartApp",
+                        "description": "Application Tier",
+                        "allowExisting": false,
+                        "userGroup": {
+                            "id": ""
+                        }
+                    },
+                    "clouds": {
+                        "VC-TECLAB-SJC": {
+                            "backup": {
+                                "veeamManagedServer": "",
+                                "createBackup": false,
+                                "jobAction": "new",
+                                "jobRetentionCount": 3,
+                                "enabled": true,
+                                "providerBackupType": -1,
+                                "showScheduledBackupWarning": false
+                            },
+                            "instance": {
+                                "layout": {
+                                    "provisionTypeCode": "vmware",
+                                    "code": "vmware-centos-7.5-single",
+                                    "instanceVersion": "7.5",
+                                    "name": "VMware VM",
+                                    "id": 387
+                                },
+                                "configEnabled": true,
+                                "name": "OpenCartApp",
+                                "description": "Application Tier",
+                                "allowExisting": false,
+                                "type": "centos",
+                                "userGroup": {
+                                    "id": ""
+                                }
+                            },
+                            "networkInterfaces": [
+                                {
+                                    "ipMode": "",
+                                    "primaryInterface": true,
+                                    "showNetworkPoolLabel": false,
+                                    "showNetworkDhcpLabel": true,
+                                    "network": {
+                                        "idName": "TEC-Lab|TEC-AP|APP-EPG",
+                                        "id": "network-32",
+                                        "hasPool": false
+                                    }
+                                }
+                            ],
+                            "workflow": {
+                                "taskSetId": 3
+                            },
+                            "volumes": [
+                                {
+                                    "volumeCustomizable": true,
+                                    "readonlyName": false,
+                                    "controllerId": 231,
+                                    "maxIOPS": null,
+                                    "displayOrder": 0,
+                                    "unitNumber": "0",
+                                    "minStorage": 5368709120,
+                                    "configurableIOPS": false,
+                                    "controllerMountPoint": "231:0:4:0",
+                                    "vId": 167,
+                                    "size": 20,
+                                    "name": "root",
+                                    "rootVolume": true,
+                                    "storageType": 1,
+                                    "typeId": 1,
+                                    "id": 117,
+                                    "resizeable": true,
+                                    "datastoreId": "autoCluster",
+                                    "maxStorage": 21474836480
+                                }
+                            ],
+                            "lock": {
+                                "config": {
+                                    "hostId": true,
+                                    "vmwareFolderId": true
+                                }
+                            },
+                            "config": {
+                                "resourcePoolId": 6,
+                                "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                                "aciEpgId": 19,
+                                "hostId": 2,
+                                "createUser": true,
+                                "vmwareFolderId": "group-v5732"
+                            },
+                            "plan": {
+                                "code": "vm-1024",
+                                "id": 367
+                            },
+                            "group": {},
+                            "lockedFields": [
+                                "instance.name",
+                                "plan.id",
+                                "instance.layout.id",
+                                "version",
+                                "config.vmwareFolderId",
+                                "config.hostId",
+                                "config.resourcePoolId",
+                                "volumes",
+                                "networks",
+                                "instance.description"
+                            ]
+                        }
+                    },
+                    "backup": {
+                        "veeamManagedServer": "",
+                        "createBackup": false,
+                        "jobAction": "new",
+                        "jobRetentionCount": 3,
+                        "enabled": true,
+                        "providerBackupType": -1,
+                        "showScheduledBackupWarning": false
+                    },
+                    "networkInterfaces": [
+                        {
+                            "ipMode": "",
+                            "primaryInterface": true,
+                            "showNetworkPoolLabel": false,
+                            "showNetworkDhcpLabel": true,
+                            "network": {
+                                "idName": "TEC-Lab|TEC-AP|APP-EPG",
+                                "id": "network-32",
+                                "hasPool": false
+                            }
+                        }
+                    ],
+                    "workflow": {
+                        "taskSetId": 3
+                    },
+                    "volumes": [
+                        {
+                            "volumeCustomizable": true,
+                            "readonlyName": false,
+                            "controllerId": 231,
+                            "maxIOPS": null,
+                            "displayOrder": 0,
+                            "unitNumber": "0",
+                            "minStorage": 5368709120,
+                            "configurableIOPS": false,
+                            "controllerMountPoint": "231:0:4:0",
+                            "vId": 167,
+                            "size": 20,
+                            "name": "root",
+                            "rootVolume": true,
+                            "storageType": 1,
+                            "typeId": 1,
+                            "id": 117,
+                            "resizeable": true,
+                            "datastoreId": "autoCluster",
+                            "maxStorage": 21474836480
+                        }
+                    ],
+                    "lock": {
+                        "config": {
+                            "hostId": true,
+                            "vmwareFolderId": true
+                        }
+                    },
+                    "config": {
+                        "resourcePoolId": 6,
+                        "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                        "aciEpgId": 19,
+                        "hostId": 2,
+                        "createUser": true,
+                        "vmwareFolderId": "group-v5732"
+                    },
+                    "plan": {
+                        "code": "vm-1024",
+                        "id": 367
+                    },
+                    "group": {},
+                    "lockedFields": [
+                        "instance.name",
+                        "plan.id",
+                        "instance.layout.id",
+                        "version",
+                        "config.vmwareFolderId",
+                        "config.hostId",
+                        "config.resourcePoolId",
+                        "volumes",
+                        "networks",
+                        "instance.description"
+                    ]
+                }
+            ],
+            "tierIndex": 1
+        },
+        "DatabaseTier": {
+            "instances": [
+                {
+                    "instance": {
+                        "type": "centos",
+                        "cloud": "VC-TECLAB-SJC",
+                        "layout": {
+                            "provisionTypeCode": "vmware",
+                            "code": "vmware-centos-7.5-single",
+                            "instanceVersion": "7.5",
+                            "name": "VMware VM",
+                            "id": 387
+                        },
+                        "configEnabled": true,
+                        "name": "OpenCartDB",
+                        "description": "MySQL Database",
+                        "allowExisting": false,
+                        "userGroup": {
+                            "id": ""
+                        }
+                    },
+                    "clouds": {
+                        "VC-TECLAB-SJC": {
+                            "backup": {
+                                "veeamManagedServer": "",
+                                "createBackup": false,
+                                "jobAction": "new",
+                                "jobRetentionCount": 3,
+                                "enabled": true,
+                                "showScheduledBackupWarning": false,
+                                "providerBackupType": -1
+                            },
+                            "instance": {
+                                "layout": {
+                                    "provisionTypeCode": "vmware",
+                                    "code": "vmware-centos-7.5-single",
+                                    "instanceVersion": "7.5",
+                                    "name": "VMware VM",
+                                    "id": 387
+                                },
+                                "configEnabled": true,
+                                "name": "OpenCartDB",
+                                "description": "MySQL Database",
+                                "allowExisting": false,
+                                "type": "centos",
+                                "userGroup": {
+                                    "id": ""
+                                }
+                            },
+                            "networkInterfaces": [
+                                {
+                                    "ipMode": "",
+                                    "primaryInterface": true,
+                                    "showNetworkPoolLabel": false,
+                                    "showNetworkDhcpLabel": true,
+                                    "network": {
+                                        "idName": "TEC-Lab|TEC-AP|DB-EPG",
+                                        "id": "network-31",
+                                        "hasPool": false
+                                    }
+                                }
+                            ],
+                            "workflow": {
+                                "taskSetId": 4,
+                                "taskSet": [
+                                    null,
+                                    [
+                                        null,
+                                        null,
+                                        null,
+                                        null,
+                                        null,
+                                        null,
+                                        {
+                                            "taskOptions": {
+                                                "ansibleOptions": ""
+                                            }
+                                        }
+                                    ]
+                                ]
+                            },
+                            "volumes": [
+                                {
+                                    "volumeCustomizable": true,
+                                    "readonlyName": false,
+                                    "controllerId": 231,
+                                    "maxIOPS": null,
+                                    "displayOrder": 0,
+                                    "unitNumber": "0",
+                                    "minStorage": 5368709120,
+                                    "configurableIOPS": false,
+                                    "controllerMountPoint": "231:0:4:0",
+                                    "vId": 167,
+                                    "size": 20,
+                                    "name": "root",
+                                    "rootVolume": true,
+                                    "storageType": 1,
+                                    "typeId": 1,
+                                    "id": 117,
+                                    "resizeable": true,
+                                    "datastoreId": "autoCluster",
+                                    "maxStorage": 21474836480
+                                }
+                            ],
+                            "lock": {
+                                "config": {
+                                    "hostId": true,
+                                    "vmwareFolderId": true
+                                }
+                            },
+                            "config": {
+                                "resourcePoolId": 6,
+                                "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                                "aciEpgId": 20,
+                                "hostId": 2,
+                                "createUser": true,
+                                "vmwareFolderId": "group-v5732"
+                            },
+                            "plan": {
+                                "code": "vm-1024",
+                                "id": 367
+                            },
+                            "group": {},
+                            "lockedFields": [
+                                "instance.name",
+                                "version",
+                                "instance.layout.id",
+                                "plan.id",
+                                "config.resourcePoolId",
+                                "volumes",
+                                "config.hostId",
+                                "config.vmwareFolderId",
+                                "instance.description"
+                            ]
+                        }
+                    },
+                    "backup": {
+                        "veeamManagedServer": "",
+                        "createBackup": false,
+                        "jobAction": "new",
+                        "jobRetentionCount": 3,
+                        "enabled": true,
+                        "showScheduledBackupWarning": false,
+                        "providerBackupType": -1
+                    },
+                    "networkInterfaces": [
+                        {
+                            "ipMode": "",
+                            "primaryInterface": true,
+                            "showNetworkPoolLabel": false,
+                            "showNetworkDhcpLabel": true,
+                            "network": {
+                                "idName": "TEC-Lab|TEC-AP|DB-EPG",
+                                "id": "network-31",
+                                "hasPool": false
+                            }
+                        }
+                    ],
+                    "workflow": {
+                        "taskSetId": 4,
+                        "taskSet": [
+                            null,
+                            [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                {
+                                    "taskOptions": {
+                                        "ansibleOptions": ""
+                                    }
+                                }
+                            ]
+                        ]
+                    },
+                    "volumes": [
+                        {
+                            "volumeCustomizable": true,
+                            "readonlyName": false,
+                            "controllerId": 231,
+                            "maxIOPS": null,
+                            "displayOrder": 0,
+                            "unitNumber": "0",
+                            "minStorage": 5368709120,
+                            "configurableIOPS": false,
+                            "controllerMountPoint": "231:0:4:0",
+                            "vId": 167,
+                            "size": 20,
+                            "name": "root",
+                            "rootVolume": true,
+                            "storageType": 1,
+                            "typeId": 1,
+                            "id": 117,
+                            "resizeable": true,
+                            "datastoreId": "autoCluster",
+                            "maxStorage": 21474836480
+                        }
+                    ],
+                    "lock": {
+                        "config": {
+                            "hostId": true,
+                            "vmwareFolderId": true
+                        }
+                    },
+                    "config": {
+                        "resourcePoolId": 6,
+                        "appProfile": "uni/tn-TEC-Lab/ap-TEC-AP",
+                        "aciEpgId": 20,
+                        "hostId": 2,
+                        "createUser": true,
+                        "vmwareFolderId": "group-v5732"
+                    },
+                    "plan": {
+                        "code": "vm-1024",
+                        "id": 367
+                    },
+                    "group": {},
+                    "lockedFields": [
+                        "instance.name",
+                        "version",
+                        "instance.layout.id",
+                        "plan.id",
+                        "config.resourcePoolId",
+                        "volumes",
+                        "config.hostId",
+                        "config.vmwareFolderId",
+                        "instance.description"
+                    ]
+                }
+            ],
+            "tierIndex": 2
+        }
+    },
+    "templateName": "OpenCart Morpheus Blueprint (V-Center)",
+    "name": "AppNameHere",
+    "group": {
+        "id": 2,
+        "name": "VC-TECLAB-SJC"
+    },
+    "environment": "Dev",
+    "envCode": "dev",
+    "type": "morpheus"
+}
