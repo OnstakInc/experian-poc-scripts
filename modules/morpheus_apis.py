@@ -41,7 +41,7 @@ def get_apps(app_id=None):
 
     return json.loads(result.content)
 
-def create_apps():
+def create_apps(data):
     
     url = f'{MORPHEUS_URL}/api/apps'
 
@@ -49,7 +49,7 @@ def create_apps():
         'Authorization': f'Bearer {get_auth_token()}'
     }
 
-    result = requests.get(url, headers=headers, verify=False)
+    result = requests.get(url, headers=headers, data=json.dumps(data) verify=False)
 
     return json.loads(result.content)
 
