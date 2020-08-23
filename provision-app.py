@@ -36,7 +36,7 @@ blueprint = json.loads(open(args.blueprint, 'r').read())
 
 blueprint['name'] = args.name
 
-# app = morpheus_apis.create_apps(blueprint)
+app = morpheus_apis.create_apps(blueprint)
 
 print(f'INFO: Stack Provisioning: {args.name}')
 #########################################################
