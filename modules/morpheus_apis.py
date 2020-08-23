@@ -49,7 +49,7 @@ def create_apps(data):
         'Authorization': f'Bearer {get_auth_token()}'
     }
 
-    result = requests.get(url, headers=headers, data=json.dumps(data), verify=False)
+    result = requests.post(url, headers=headers, data=json.dumps(data), verify=False)
 
     return json.loads(result.content)
 
