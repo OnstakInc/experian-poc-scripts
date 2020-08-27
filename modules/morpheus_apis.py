@@ -9,8 +9,8 @@ requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.
 #########################################################
 # Environment Variables #################################
 #########################################################
-MORPHEUS_USERNAME = os.environ.get('USERNAME')
-MORPHEUS_PASSWORD = os.environ.get('PASSWORD')
+MORPHEUS_USERNAME = os.environ.get('MORPHEUS_USERNAME')
+MORPHEUS_PASSWORD = os.environ.get('MORPHEUS_PASSWORD')
 MORPHEUS_URL = os.environ.get('MORPHEUS_URL')
 #########################################################
 
