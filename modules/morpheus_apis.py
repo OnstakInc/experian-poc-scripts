@@ -9,8 +9,8 @@ requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.
 #########################################################
 # Environment Variables #################################
 #########################################################
-USERNAME = os.environ.get('USERNAME')
-PASSWORD = os.environ.get('PASSWORD')
+MORPHEUS_USERNAME = os.environ.get('USERNAME')
+MORPHEUS_PASSWORD = os.environ.get('PASSWORD')
 MORPHEUS_URL = os.environ.get('MORPHEUS_URL')
 #########################################################
 
@@ -23,8 +23,8 @@ def get_auth_token():
     url = f'{MORPHEUS_URL}/oauth/token?grant_type=password&scope=write&client_id=morph-api'
 
     payload = {
-        'username': USERNAME,
-        'password': PASSWORD
+        'username': MORPHEUS_USERNAME,
+        'password': MORPHEUS_PASSWORD
     }
 
     result = requests.post(url, data=payload, verify=False)

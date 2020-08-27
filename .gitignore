@@ -1,5 +1,6 @@
 # exclude files
 run.ps1
+notes.txt
 
 # exclude directories
 __pycache__
