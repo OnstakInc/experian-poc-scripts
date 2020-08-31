@@ -27,15 +27,16 @@ if not app:
 while True:
     result = morpheus_apis.get_apps(app.get('id'))
 
-    print(result.get('app'))
+    if result.get('app').get('appStatus'):
+        print(f"INFO: Stack Status: {result.get('app').get('appStatus')}")
+    else:
+        print(f"INFO: Stack Status: {result.get('app').get('status')}")
 
-    print(f"INFO: Stack Status: {result.get('app').get('appStatus')}")
-
-    if result.get('app').get('appStatus') == 'failed':
+    if result.get('app').get('status') == 'failed' or result.get('app').get('appStatus') == 'failed':
         print(f"ERROR: Stack Provisioning Failed: {args.name}")
         exit(1)
 
-    if result.get('app').get('appStatus') == 'completed':
+    if result.get('app').get('status') == 'running' or result.get('app').get('appStatus') == 'completed':
         print(f"INFO: Stack Provisioned: {args.name}")
         exit()
 
